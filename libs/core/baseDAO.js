@@ -31,7 +31,7 @@ function BaseDAO(MongooseModel) {
     };
     this.findOne = async function (query) {
         try {
-            const obj = await this.Model.find(query).exec();
+            const obj = await this.Model.findOne(query).exec();
             return obj;
         } catch (err) {
             throw (err);
